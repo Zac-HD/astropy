@@ -5,6 +5,8 @@ jobs:
   32bit-and-parallel:
     docker:
       - image: quay.io/pypa/manylinux1_i686
+    environment:
+        HYPOTHESIS_PROFILE: ci
     steps:
       - checkout
       - run:
@@ -42,6 +44,8 @@ jobs:
   image-tests-mpl212:
     docker:
       - image: astropy/image-tests-py36-mpl212:1.10
+    environment:
+        HYPOTHESIS_PROFILE: ci
     steps:
       - checkout
       - run:
@@ -56,6 +60,8 @@ jobs:
   image-tests-mpl222:
     docker:
       - image: astropy/image-tests-py36-mpl222:1.10
+    environment:
+        HYPOTHESIS_PROFILE: ci
     steps:
       - checkout
       - run:
@@ -70,6 +76,8 @@ jobs:
   image-tests-mpl302:
     docker:
       - image: astropy/image-tests-py37-mpl302:1.10
+    environment:
+        HYPOTHESIS_PROFILE: ci
     steps:
       - checkout
       - run:
@@ -84,6 +92,8 @@ jobs:
   image-tests-mpl310:
     docker:
       - image: astropy/image-tests-py37-mpl311:1.10
+    environment:
+        HYPOTHESIS_PROFILE: ci
     steps:
       - checkout
       - run:
@@ -98,6 +108,8 @@ jobs:
   image-tests-mpldev:
     docker:
       - image: astropy/image-tests-py37-base:1.4
+    environment:
+        HYPOTHESIS_PROFILE: ci
     steps:
       - checkout
       - run:
